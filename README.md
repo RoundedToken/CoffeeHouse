@@ -1,6 +1,7 @@
 # [CoffeeHouse](https://rolling-scopes-school.github.io/roundedtoken-JSFE2023Q4/coffee-house/dist/)
-An educational project whose goal is to teach how to implement a simple landing using basic technologies. Adaptive layout is done using `SCSS`, assembly is done using `Vite`, and all interactivity is done using `native JS`. No libraries or frameworks were deliberately used.
-<br/>
+An educational project whose goal is to teach how to implement a simple landing using basic technologies following detailed technical criteria. Adaptive layout is done using `SCSS`, assembly is done using `Vite`, and all interactivity is done using `native JS`. No libraries or frameworks were deliberately used
+<br>
+<br>
 You can find `Figma` design [here](https://www.figma.com/file/SAoBmuOqTfguehdT4IFRxQ/Coffee-House?type=design&node-id=0-1&mode=design&t=16JbSjHc7NiufWSS-0)
 
 ## Technologies
