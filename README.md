@@ -5,6 +5,7 @@ An educational project whose goal is to teach how to implement a simple landing 
 You can find `Figma` design [here](https://www.figma.com/file/SAoBmuOqTfguehdT4IFRxQ/Coffee-House?type=design&node-id=0-1&mode=design&t=16JbSjHc7NiufWSS-0)
 
 ## Technologies
+### Front-end
 <p>
 <img background-color='#ECD53F' width='64' src='https://github.com/RoundedToken/yacht_shop_admin/assets/117864556/1b62b65e-4f98-4380-af9f-b88054427eae'/>
 &emsp;
@@ -14,3 +15,6 @@ You can find `Figma` design [here](https://www.figma.com/file/SAoBmuOqTfguehdT4I
 &emsp;
 <img background-color='#ECD53F' width='64' height='64' src='https://github.com/RoundedToken/CoffeeHouse/assets/117864556/e4e58934-0cee-40db-9e4a-eb17fb621dda'/>
 </p>
+
+### CD
+<img background-color='#ECD53F' width='72' height='72' src='https://github.com/RoundedToken/CoffeeHouse/assets/117864556/fd769f89-fe07-498d-aec2-2742938877c1'/>
