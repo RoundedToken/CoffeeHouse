@@ -1,0 +1,414 @@
+@import './styles/index.scss';
+
+.logo-link {
+    display: flex;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100dvh;
+    z-index: 10000;
+    background-color: rgba(64, 63, 61, 0.8);
+    display: none;
+
+    &-container {
+        display: flex;
+        width: 800px;
+        padding: 16px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: $bg-body;
+        border-radius: 40px;
+        margin: auto;
+        animation: fadeIn 0.5s ease-out;
+        overflow: hidden;
+
+        @media (max-width: $bp-tablet-modal) {
+            width: 688px;
+        }
+
+        @media (max-width: $bp-mobile-modal) {
+            width: 342px;
+        }
+    }
+
+    &-preview {
+        display: flex;
+        align-items: flex-start;
+        align-self: stretch;
+    }
+
+    .image-box {
+        width: 310px;
+        min-width: 310px;
+        height: 310px;
+        border-radius: 40px;
+        overflow: hidden;
+
+        @media (max-width: $bp-mobile-modal) {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.1);
+        }
+    }
+
+    &-description {
+        display: flex;
+        padding-left: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        flex: 1 0 0;
+
+        @media (max-width: $bp-mobile) {
+            padding-left: 0;
+        }
+    }
+
+    &-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 12px;
+        align-self: stretch;
+    }
+
+    &-size,
+    &-additives {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        align-self: stretch;
+    }
+
+    &-tabs {
+        display: flex;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 8px;
+        align-self: stretch;
+        flex-wrap: wrap;
+    }
+
+    &-dop-tab {
+        cursor: pointer !important;
+    }
+
+    &-tab {
+        @include transition1;
+        cursor: pointer;
+        display: flex;
+        padding: 7px 15px 7px 7px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid $border-light;
+        border-radius: 100px;
+
+        input {
+            width: 0;
+            height: 0;
+            visibility: hidden;
+        }
+
+        p {
+            @include transition1;
+        }
+
+        &:hover {
+            background-color: $bg-container;
+            border-color: $bg-container;
+
+            p {
+                color: $text-light;
+            }
+
+            .modal-icon {
+                background-color: $bg-body;
+            }
+        }
+    }
+
+    &-tab-active {
+        background-color: $bg-container;
+        border-color: $bg-container;
+        cursor: auto;
+
+        p {
+            color: $text-light;
+        }
+
+        .modal-icon {
+            background-color: $bg-body;
+        }
+    }
+
+    &-icon {
+        @include transition1;
+        display: flex;
+        width: 30px;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+        background-color: $border-light;
+        border-radius: 100px;
+    }
+
+    &-total {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        align-self: stretch;
+
+        h3 {
+            flex: 1 0 0;
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+
+    &-alert {
+        display: flex;
+        padding: 12px 0px;
+        align-items: flex-start;
+        gap: 8px;
+        align-self: stretch;
+        border-top: 1px solid $border-light;
+    }
+
+    &-close {
+        @include transition1;
+        display: flex;
+        padding: 9px 78px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        align-self: stretch;
+        border-radius: 100px;
+        border: 1px solid $border-dark;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $bg-container;
+            color: $text-light;
+        }
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+
+    .menu {
+        display: flex;
+        padding: 0px 40px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+        align-self: stretch;
+
+        @media (max-width: $bp-mobile) {
+            padding-inline: 16px;
+        }
+
+        &-container {
+            display: flex;
+            max-width: 1360px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+            align-self: stretch;
+        }
+
+        .more-items {
+            display: none;
+            justify-self: center;
+            align-self: center;
+
+            @media (max-width: $bp-tablet-menu) {
+                display: flex;
+            }
+        }
+
+        &-offer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            align-self: stretch;
+
+            h1 {
+                text-align: center;
+                width: 800px;
+                font-size: 60px;
+                font-weight: 600;
+                line-height: 125%; /* 75px */
+
+                @media (max-width: $bp-tablet-menu) {
+                    width: auto;
+                }
+
+                @media (max-width: $bp-mobile) {
+                    font-size: 32px;
+                    line-height: 125%;
+                }
+            }
+
+            .tabs {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+
+                @media (max-width: $bp-mobile) {
+                    gap: 8px;
+                }
+
+                .tab-item {
+                    @include transition1;
+                    display: flex;
+                    padding: 7px 16px 7px 8px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                    border-radius: 100px;
+                    border: 1px solid $border-light;
+
+                    &-icon {
+                        @include transition1;
+                        display: flex;
+                        padding: 3px 7px;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 100px;
+                        background-color: $border-light;
+                    }
+
+                    &-active {
+                        border-color: $bg-container;
+                        background-color: $bg-container;
+                        color: $text-light;
+                        cursor: auto !important;
+
+                        .tab-item-icon {
+                            background-color: $bg-body;
+                        }
+                    }
+
+                    @media (hover: hover) and (pointer: fine) {
+                        &:hover {
+                            border-color: $bg-container;
+                            background-color: $bg-container;
+                            color: $text-light;
+                            cursor: pointer;
+
+                            .tab-item-icon {
+                                background-color: $bg-body;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-grid {
+            display: flex;
+            max-width: 1360px;
+            justify-content: center;
+            align-items: flex-start;
+            align-content: flex-start;
+            gap: 40px;
+            flex-wrap: wrap;
+
+            .preview {
+                display: flex;
+                overflow: hidden;
+                width: 310px;
+                height: 506px;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 40px;
+                border: 1px solid $border-light;
+                cursor: pointer;
+                animation: fadeIn 0.5s ease-out;
+
+                @keyframes fadeIn {
+                    0% {
+                        opacity: 0;
+                    }
+                    100% {
+                        opacity: 1;
+                    }
+                }
+
+                @media (hover: hover) and (pointer: fine) {
+                    &:hover {
+                        .box {
+                            img {
+                                transform: scale(1);
+                            }
+                        }
+                    }
+                }
+
+                @media (max-width: $bp-tablet-menu) {
+                    &:nth-child(n + 5) {
+                        display: none;
+                    }
+                }
+
+                .box {
+                    width: 310px;
+                    height: 309px;
+                    flex-shrink: 0;
+                    border-radius: 40px;
+                    overflow: hidden;
+
+                    img {
+                        @include transition1;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transform: scale(1.1);
+                    }
+                }
+
+                .description {
+                    display: flex;
+                    padding: 20px;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    flex: 1 0 0;
+                    align-self: stretch;
+
+                    .title {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        gap: 12px;
+                        align-self: stretch;
+                    }
+                }
+            }
+        }
+    }
+}

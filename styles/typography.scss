@@ -1,0 +1,92 @@
+@import url('https://fonts.cdnfonts.com/css/inter');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import './breakpoints.scss';
+
+body {
+    font-family: 'Inter', sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    color: $text-dark;
+    font-feature-settings: 'clig' off, 'liga' off;
+}
+
+h1 {
+    font-size: 72px;
+    font-weight: 600;
+    line-height: 105%; /* 75.6px */
+
+    &.accent {
+        font-style: italic;
+    }
+
+    @media (max-width: $bp-mobile) {
+        font-size: 42px;
+        line-height: 115%;
+    }
+}
+
+h2 {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 125%; /* 75px */
+
+    &.accent {
+        font-style: italic;
+    }
+
+    @media (max-width: $bp-mobile) {
+        font-size: 32px;
+        line-height: 125%;
+    }
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 125%; /* 30px */
+}
+
+p.medium {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+}
+
+p.caption {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 140%; /* 14px */
+}
+
+.medium {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+}
+
+.caption {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 140%; /* 14px */
+}
+
+a,
+button {
+    text-decoration: none;
+    color: $text-dark;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%; /* 24px */
+}
+
+.link-t {
+    color: $text-dark;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%; /* 24px */
+}
+
+.burger-link {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 125%; /* 40px */
+}

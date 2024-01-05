@@ -1,0 +1,16 @@
+$text-dark: #403f3d;
+$text-light: #e1d4c9;
+$text-accent: #b0907a;
+
+$bg-body: #e1d4c9;
+$bg-container: #665f55;
+$bg-backdrop: #403f3dcc;
+
+$border-light: #c1b6ad;
+$border-dark: #665f55;
+
+$filter-border-dark: invert(38%) sepia(15%) saturate(358%) hue-rotate(356deg) brightness(90%)
+    contrast(84%);
+$filter-body: invert(96%) sepia(29%) saturate(441%) hue-rotate(302deg) brightness(93%) contrast(89%);
+$filter-text-dark: invert(21%) sepia(9%) saturate(187%) hue-rotate(2deg) brightness(98%)
+    contrast(87%);
